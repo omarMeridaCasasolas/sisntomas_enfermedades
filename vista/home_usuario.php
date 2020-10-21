@@ -31,7 +31,7 @@
                     </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                        <form action="controlador/formCrearEnfermedad.php" method="post">
+                        <form action="../controlador/formCrearEnfermedad.php" method="post"  enctype="multipart/form-data" accept="image/*">
                             <div class="form-group">
                                 <label for="nomEnfermedad">Ingrese nombre de la enfermedad: </label>
                                 <input type="text" name="nomEnfermedad" id="nomEnfermedad" class="form-control" required> 
@@ -43,7 +43,7 @@
                             <div class="form-group">
                                 <label for="relacionSistemas">Enfermedad relacionada con : </label>
                                 <select class="form-control" id="relacionSistemas" name="relacionSistemas" class="form-control" required>
-                                    
+
                                 </select>
                             </div>
                             <div class="form-group">

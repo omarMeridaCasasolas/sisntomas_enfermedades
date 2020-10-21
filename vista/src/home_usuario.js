@@ -1,8 +1,8 @@
 $(document).ready(function () {
     listarEnfermedades();
     listarSistemasDelCuerpo();
-    listarSintomas();
-    addOpcionesSistemas();
+    //listarSintomas();
+    //addOpcionesSistemas();
 });
 function addOpcionesSistemas(){
     let entrada = { 
@@ -37,6 +37,7 @@ function listarEnfermedades(){
             {"data":null}
         ]
     });
+    addOpcionesSistemas();
 }
 function listarSistemasDelCuerpo(){
     $("#tableSistemaHumano").DataTable({
