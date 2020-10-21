@@ -20,13 +20,16 @@
                 $upload = $s3->upload($bucket, $_FILES['urlEnfermedad']['name'], fopen($_FILES['urlEnfermedad']['tmp_name'], 'rb'), 'public-read');
                 //Mi Codigo
 
-                $enlace= htmlspecialchars($upload->get('ObjectURL'));
+                //$enlace= htmlspecialchars($upload->get('ObjectURL'));
+                $enlace= $upload->get('ObjectURL');
+
+                echo $enlace."\n";
                 
                 $mysqli = new mysqli('bxqsxwdoasmaf0zorzvi-mysql.services.clever-cloud.com', 'uasrxz4qrh1xinnr', 'WSM9ks7dz2mQJcZ9DUCy', 'bxqsxwdoasmaf0zorzvi');
                     if ($mysqli->connect_errno) {
                         echo "Lo sentimos, este sitio web está experimentando problemas.";  
                         echo "Error: Fallo al conectarse a MySQL debido a: \n";
-                        echo "Errno: " . $mysqli->connect_errno . "\n";
+                        echo "Error: " . $mysqli->connect_errno . "\n";
                         echo "Error: " . $mysqli->connect_error . "\n";            
                         exit;
                     }
