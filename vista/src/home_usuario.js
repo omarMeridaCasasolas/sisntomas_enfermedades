@@ -17,7 +17,7 @@ function addOpcionesSistemas(){
             console.log(response);
             let listaNombres = JSON.parse(response);
             listaNombres.forEach(element => {
-                $("#relacionSistemas").append("<option value='"+element.idSistema+"'>"+element.nombreSistema+"</option>");
+                $("#relacionSistemas").append("<option value='"+element.id+"'>"+element.nombreSistema+"</option>");
             });
         }
     });

@@ -42,7 +42,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="relacionSistemas">Enfermedad relacionada con : </label>
-                                <select class="form-control" id="relacionSistemas" name="relacionSistemas" class="form-control" required>
+                                <select class="form-control" id="relacionSistemas" name="relacionSistemas"  required>
 
                                 </select>
                             </div>
