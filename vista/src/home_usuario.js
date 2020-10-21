@@ -32,7 +32,7 @@ function listarEnfermedades(){
         "columns":[
             {"data":"ID_SISTEMAS"},
             {"data":"NOMBRE_ENFERMEDAD"},
-            {"data":"DESCRIPCION_ENFERMEDAD"},
+            {"data":"DESCRIP_ENFERMEDAD"},
             {"data":"LINK_IMAGEN"},
             {"data":null}
         ]

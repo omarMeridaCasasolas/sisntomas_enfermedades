@@ -30,7 +30,7 @@
                         echo "Error: " . $mysqli->connect_error . "\n";            
                         exit;
                     }
-                    $sql = "INSERT INTO ENFERMEDAD(ID_SISTEMAS,NOMBRE_ENFERMEDAD,DESCRIPCION_ENFERMEDAD,LINK_IMAGEN) VALUES($relacionSistemas,$nomEnfermedad,$descEnfermedad,$enlace)";
+                    $sql = "INSERT INTO ENFERMEDAD(ID_SISTEMAS,NOMBRE_ENFERMEDAD,DESCRIP_ENFERMEDAD,LINK_IMAGEN) VALUES($relacionSistemas,$nomEnfermedad,$descEnfermedad,$enlace)";
                     if (!$resultado = $mysqli->query($sql)) {
                         // ¡Oh, no! La consulta falló. 
                         echo "Lo sentimos, este sitio web está experimentando problemas.";
