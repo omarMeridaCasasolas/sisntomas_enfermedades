@@ -45,7 +45,7 @@
                     }else{
                         mysqli_close($mysqli);
                         echo "Insercion realizada";
-                        header("Location:../home_usuario.php");
+                        header("Location:../vista/home_usuario.php");
                     }
                 mysqli_close($mysqli);
                 // if($res){
