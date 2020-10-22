@@ -31,7 +31,7 @@
                     </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                        <form action="../controlador/formCrearEnfermedad.php" method="post"  enctype="multipart/form-data" accept="image/*">
+                        <form action="../controlador/formCrearEnfermedad.php" method="post"  enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="nomEnfermedad">Ingrese nombre de la enfermedad: </label>
                                 <input type="text" name="nomEnfermedad" id="nomEnfermedad" class="form-control" required> 
@@ -42,16 +42,95 @@
                             </div>
                             <div class="form-group">
                                 <label for="relacionSistemas">Enfermedad relacionada con : </label>
-                                <select class="form-control" id="relacionSistemas" name="relacionSistemas"  required>
-
+                                <select class="selectEnfermedades form-control" id="relacionSistemas" name="relacionSistemas" required>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="urlEnfermedad">Ingrese imagen de la enfermedad: </label>
-                                <input type="file" name="urlEnfermedad" id="urlEnfermedad" class="form-control" required>
+                                <input type="file" name="urlEnfermedad" id="urlEnfermedad" class="form-control" accept="image/*" required>
                             </div>
                             <div class="text-center">
                                 <input type="submit" value="Ingresar enfermedad" class="btn btn-primary"> 
+                                <button type="button" class="btn btn-danger" class="close" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- editar enfermedades -->
+        <button type="button" class="d-none" data-toggle="modal" data-target="#myModal2" id="vtnOpenEditEnfermedad">
+        </button>
+         <!-- The Modal -->
+        <div class="modal fade" id="myModal2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-warning">
+                        <h4 class="modal-title">Editar Enfermedades</h4>
+                        <button type="button" class="close" data-dismiss="modal" id="vtnClosedEditEnfermedad">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="../controlador/formEditEnfermedad.php" id="formEditEnfermedad" method="post"  enctype="multipart/form-data">
+                            <input type="text" class="d-none" name="idEditEnfermedad" id="idEditEnfermedad">
+                            <div class="form-group">
+                                <label for="nomEditEnfermedad">Ingrese nombre de la enfermedad: </label>
+                                <input type="text" name="nomEditEnfermedad" id="nomEditEnfermedad" class="form-control" required> 
+                            </div>
+                            <div class="form-group">
+                                <h5>Descripcion de la enfermedad</h5>
+                                <textarea name="descEditEnfermedad" id="descEditEnfermedad"  rows="10" class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="relacionEditSistemas">Enfermedad relacionada con : </label>
+                                <select class="form-control selectEnfermedades" id="relacionEditSistemas" name="relacionEditSistemas" required>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5> Enlace anterio de la imagen era : <a href="" id="LinkEditImage" target="_blank"> imagen</a></h5>
+                                <div class="text-center">
+                                    <img  src="" id="viewImageEdit" alt="text related to image"  height="190">
+                                </div>
+                                <br>
+                                <label for="urlEditEnfermedad">Ingrese imagen de la enfermedad: </label>
+                                <input type="file" name="urlEditEnfermedad" id="urlEditEnfermedad" class="form-control" accept="image/*">
+                                <input type="text" class="d-none" name="urlAntiguaEnfermedad" id="urlAntiguaEnfermedad">
+                            </div>
+                            <div class="text-center">
+                                <input type="submit" value="Actualizar Enfermedad" class="btn btn-primary"> 
+                                <button type="button" class="btn btn-danger" class="close" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eliminar enfermedades -->
+        <button type="button" class="d-none" data-toggle="modal" data-target="#myModal3" id="vtnOpenEliminarEnfermedad">
+        </button>
+         <!-- The Modal -->
+        <div class="modal fade" id="myModal3">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-danger">
+                        <h4 class="modal-title">Editar Enfermedades</h4>
+                        <button type="button" class="close" data-dismiss="modal" id="vtnClosedEliminarEnfermedad">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="" id="formEliminarEnfermedad" method="post"  enctype="multipart/form-data">
+                            <input type="text" class="d-none" name="idEliminarEnfermedad" id="idEliminarEnfermedad">
+                            <h6>Estas seguro que quiere eliminar la imagane <span id="urlEliminarEnfermedad"></span></h6>
+                            <div class="text-center">
+                                    <img  src="" id="viewImageEliminar" alt="text related to image"  height="190">
+                                </div>
+                            <div class="text-center mt-2">
+                                <input type="submit" value="Si" class="btn btn-primary"> 
                                 <button type="button" class="btn btn-danger" class="close" data-dismiss="modal">Cancelar</button>
                             </div>
                         </form>

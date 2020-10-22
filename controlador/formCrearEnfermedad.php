@@ -43,10 +43,11 @@
                         echo "Error: " . $mysqli->error . "\n";
                         exit;
                     }else{
+                        mysqli_close($mysqli);
                         echo "Insercion realizada";
+                        header("Location:../home_usuario.php");
                     }
-                    mysqli_close($mysqli);
-
+                mysqli_close($mysqli);
                 // if($res){
                 //     echo "se subio correctamente el archivo";
                 // }else{
